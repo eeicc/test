@@ -3,6 +3,8 @@ class Employee:
     def __init__(self):
         self.__id = 0
         self.__name = ''
+    #則一顯示 8~14 or 16~23
+    
     # def set_id(self,value):
     #     if value <0:
     #         raise ValueError('ID輸入錯誤')
