@@ -22,5 +22,8 @@ class Employee:
             raise ValueError('ID輸入錯誤')
         self.__id=value
 emp=Employee()
-emp.id=1
-print(emp.id)
+id=int(input('請輸入Id:'))
+emp.id=id
+name=input('請輸入Name:')
+emp.name=name
+print(emp.id,emp.name)
