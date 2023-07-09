@@ -1,0 +1,11 @@
+class Employee:
+    __slots__ = ['id','name']
+    # def __setattr__(self, key, value):
+    #     if key in ['id','name']:
+    #         super().__setattr__(key, value)
+    #     else:
+    #         raise Exception('Illegal Property')
+e=Employee()
+e.id=1
+print(e.id)
+#e.adde = 'Kao'
