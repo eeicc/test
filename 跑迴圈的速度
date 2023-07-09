@@ -1,0 +1,6 @@
+l = []
+import time
+start = time.time()
+for _ in range(10.0000):
+    l.insert(0,'A')
+print('elapsed=',time.time()-start)
