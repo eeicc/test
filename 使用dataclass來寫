@@ -1,0 +1,14 @@
+from dataclasses import dataclass
+@dataclass(order = True)
+class Employee:
+    id : int
+    name : str
+    
+e = Employee(1,'Mary')
+print(e)
+l = [e]
+print(l)
+e1 = Employee(1,'Mary')
+e2 = Employee(2,'John')
+l = [e1,e2]
+print(sorted(l))
