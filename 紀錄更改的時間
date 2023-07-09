@@ -4,7 +4,7 @@ from datetime import datetime
 class Employee:
     id : int
     name : str
-    last_modified : datetime = field(init=False,default=datetime.now(),repr=False)
+    last_modified : datetime = field(init=False,default=datetime.now(),repr=False) #repr=False去掉將記錄當下時間
     def __post_init__(self):
         if self.id < 0:
             raise ValueError('Illegal ID')
@@ -15,5 +15,5 @@ class Sales(Employee):
 # e = Employee(-1,'Mary')
 # print(e)
 sales = Sales(2,'John')
-sales.quota = 1000_000
+sales.quota = 100.0000
 print(sales)
