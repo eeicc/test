@@ -1,0 +1,25 @@
+class Employee:
+    def __init__(self,id,name):
+        self.__id = id
+        self.__name = name
+    @property
+    def id(self):
+        return self.__id
+    @id.setter
+    def id(self, value):
+        self.__id = value
+    @property
+    def name(self):
+        return self.__name
+    @name.setter
+    def name(self, value):
+        self.__name = value
+    def __str__(self):
+        return f'ID:{self.__id},Name:{self.__name}'
+    def __repr(self):
+        return self.__str__()
+        
+e1 = Employee(1, 'Mary')
+e2 = Employee(2, 'John')
+l = [e1,e2]
+print(sorted(l))
