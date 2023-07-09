@@ -6,7 +6,7 @@ for _ in range(10.0000):
     l.insert(0,'A') #insert往前新增 #append往後新增
 print('elapsed=',time.time()-start)
 '''
-#使用linked list，向前新增欄位，能使程式跑得更順
+#使用linked list，向前新增欄位，使程式優化
 import collections
 import time
 l = collections.deque()
