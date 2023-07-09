@@ -1,0 +1,36 @@
+class Employee:
+    def __init__(self,id,name):
+        self.__id = id
+        self.__name = name
+    @property
+    def id(self):
+        return self.__id
+    @id.setter
+    def id(self, value):
+        self.__id = value
+    @property
+    def name(self):
+        return self.__name
+    @name.setter
+    def name(self, value):
+        self.__name = value
+    def __str__(self):
+        return f'ID:{self.__id},Name:{self.__name}'
+    def __repr__(self):
+        return self.__str__()
+    
+    def __lt__(self, other):
+        return self.id > other.id
+    def __eq__(self, other):
+        return self.id == other.id
+    def __hash__(self): #雜湊值，判讀是否重複
+        _hash = 7
+        _hash = 83*_hash + self.__id
+        _hash = 199*_hash + hash(self.__name)
+        return _hash
+    
+e1 = Employee(1, 'Mary')
+#e2 = Employee(2, 'John')
+s = set()
+s.add(e1)
+print(s)
