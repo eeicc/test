@@ -1,0 +1,19 @@
+from dataclasses import dataclass,field
+from datetime import datetime
+@dataclass(order=True,unsafe_hash=True)
+class Employee:
+    id : int
+    name : str
+    last_modified : datetime = field(init=False,default=datetime.now(),repr=False)
+    def __post_init__(self):
+        if self.id < 0:
+            raise ValueError('Illegal ID')
+
+@dataclass()
+class Sales(Employee):
+    quota: int = field(init=False,default=0)
+# e = Employee(-1,'Mary')
+# print(e)
+sales = Sales(2,'John')
+sales.quota = 1000_000
+print(sales)
