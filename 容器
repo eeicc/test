@@ -27,6 +27,14 @@ class LinkedList:
             self.__tail.next = node
             self.__tail = node
         self.__size += 1
+    def insert(self,value):
+        node = Node(value)
+        if self.__head == None:
+            self.__head = node
+            self.__tail = self.__head
+        else:
+            node.next = self.__head
+            self.__head = node
     def print(self):
         position = self.__head
         while position:
@@ -37,4 +45,7 @@ ll = LinkedList()
 ll.append(1)
 ll.append(2)
 ll.append(3)
+ll.insert(4)
+ll.insert(5)
+ll.insert(6)
 ll.print()
