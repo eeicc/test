@@ -1,0 +1,40 @@
+class Node:
+    def __init__(self,value):
+        self.__value = value
+        self.__next_node = None
+    @property
+    def value(self):
+        return self.__value
+    @property
+    def next(self):
+        return self.__next_node
+    @next.setter
+    def next(self,next_node):
+        self.__next_node = next_node
+
+
+class LinkedList:
+    def __init__(self):
+        self.__head = None
+        self.__tail = None
+        self.__size = 0
+    def append(self,value):
+        node = Node(value)
+        if self.__head == None:
+            self.__head = node
+            self.__tail = self.__head
+        else:
+            self.__tail.next = node
+            self.__tail = node
+        self.__size += 1
+    def print(self):
+        position = self.__head
+        while position:
+            print(position.value)
+            position = position.next
+        
+ll = LinkedList()
+ll.append(1)
+ll.append(2)
+ll.append(3)
+ll.print()
