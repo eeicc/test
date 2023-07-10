@@ -40,12 +40,25 @@ class LinkedList:
         while position:
             print(position.value)
             position = position.next
+    def __iter__(self):
+        self.__iter__node = self.__head
+        return self
+    def __next__(self):
+        if self.__iter__node:
+            value = self.__iter__node.value
+            self.__iter__node = self.__iter__node.next
+            return value
+        raise StopIteration
+    def __getitem__(self,item):
+        for idx,value in enumerate(self):
+            if idx==item:
+                return value
         
 ll = LinkedList()
-ll.append(1)
-ll.append(2)
 ll.append(3)
-ll.insert(4)
-ll.insert(5)
-ll.insert(6)
-ll.print()
+ll.append(2)
+ll.append(1)
+print(ll[0])
+print(ll[3])
+print('OK')
+
