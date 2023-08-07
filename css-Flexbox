@@ -1,0 +1,34 @@
+display: flex; 給予元素
+
+justify-content 主要以主軸線來排版
+justify-content: flex-start 預設值，對齊主軸線最前端
+justify-content: flex-end 對齊主軸線最終端
+justify-content: center 對齊主軸線中央
+justify-content: space-around 平均分配寬度和間距
+justify-content: space-between 平均分配寬度，第一項和最後一項貼齊邊緣
+
+align-items 和 justify-content 相反，主要以交錯軸線來做排版。
+align-items: flex-start 對齊交錯軸線最前端
+align-items: flex-end 對齊交錯軸線最末端
+align-items: center 對齊交錯軸線中央
+align-items: stretch 預設值，將內容元素撐開至 flexbox 大小
+align-items: baseline 對齊內容物的基線
+
+如果我們想將內容物呈現直向排列，可以透過 flex-direction 來設定。
+flex-direction: row; 預設值，內容物依照主軸線擺設，因此內容物呈現橫向排列。
+flex-direction: row-reverse; 與row相同，且主軸線起點與終點相反。
+flex-direction: column; 交錯軸線位置與主軸線位置調換，因此內容物呈現直向排列
+flex-direction: column-reverse; 與column相同，且主軸線起點與終點相反
+
+在使用 flexbox 效果時我們可以發現如果子元素數量較多時，內容常會被壓縮且擠在同一行，這時我們就可以透過 flex-wrap 來換行。
+flex-wrap: nowrap; 預設值，不斷行
+flex-wrap: wrap; 多行
+flex-wrap: wrap-reverse; 多行，且主軸線起點與終點相反
+
+align-content 屬性介紹
+align-content: flex-start：每行貼齊交錯軸線最前端
+align-content: flex-end：每行貼齊交錯軸線最末端
+align-content: center：每行對齊交錯軸線中間
+align-content: space-between：第一行與最後一行分別對齊交錯軸線最前端與最末端
+align-content: space-around：每行平均分配每行間距
+align-content: stretch：預設值，每行內容元素全部撐開至 flexbox 大小
