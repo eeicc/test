@@ -1,3 +1,6 @@
+import numpy as np
+import pandas as pd
+
 初始值: list1=[1,2,3,4]
 np1 = np.array(list1) 建立一維陣列 
 np1.dtype 查看資料型態 # dtype('int32')
@@ -7,3 +10,4 @@ np1[1:] 顯示第一項至最後一項 # array([2, 3, 4])
 np1[-1] 顯示最後一項 #4
 np1[0] = 2 替換第0項為2
 np1 = np1.reshape((2,2)) 建立二維陣列  # [1,2,3,4]=array([[1, 2],[3, 4]])
+np1.dot(np2) 陣列互乘
