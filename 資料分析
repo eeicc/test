@@ -11,3 +11,39 @@ np1[-1] 顯示最後一項 #4
 np1[0] = 2 替換第0項為2
 np1 = np1.reshape((2,2)) 建立二維陣列  # [1,2,3,4]=array([[1, 2],[3, 4]])
 np1.dot(np2) 陣列互乘
+
+import pandas as pd
+users = pd.read_csv('URL',
+                   sep='|',
+                   index_col='user_id')
+
+列出前五筆資料 users.head()
+列出後五筆資料 users.tail()
+資料筆數 users.shape[]
+欄位名稱和資料型態 users.dtypes
+指定欄位 users['']
+列印欄位中的第一筆資料 users.欄位名稱[1]
+欄位中，有多少不同的種類 users.欄位名稱.nunique()
+該欄位的統計數量有多少？ users.欄位名稱.value_counts()
+該欄位出現次數最高的資料？ users.欄位名稱.value_counts().head(1)
+該欄位出現次數最少的資料？ users.欄位名稱.value_counts().tail(1)
+基本統計資料 users.describe()
+全部欄位基本統計資料 users.describe(include='all')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
