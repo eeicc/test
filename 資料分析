@@ -38,7 +38,7 @@ a.sort_values('欄位名稱', ascending=False)
 =========================================================================================
 Series 物件
 一維物件，類似於一維陣列 users.Goals
-平均 round(users.Goals.mean())
+平均 round(users.欄位名稱.mean())
 過濾條件 users.Goals > 5
         users[users.Goals >5]
 尋找開頭欄位的名稱 users.欄位名稱.str.startswith('')
