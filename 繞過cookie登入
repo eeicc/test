@@ -1,0 +1,8 @@
+import requests as req
+from urllib.parse import unquote
+url = 'https://github.com/'
+
+headers = {"Cookie": "<your cookie>"}
+res = req.get(url,headers=headers)
+
+print(b'eeicc' in res.content)
